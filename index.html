@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northwest Greenville Roleplay</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section:before {
+            content: '';
+            position: absolute;
+            top: -75px;
+            left: -75px;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        section:after {
+            content: '';
+            position: absolute;
+            bottom: -75px;
+            right: -75px;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        section#about {
+            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+        }
+
+        section#rules {
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        }
+
+        section#join {
+            background: linear-gradient(135deg, #f9f586, #fbc2eb);
+            text-align: center;
+        }
+
+        .join-button {
+            display: inline-block;
+            padding: 15px 30px;
+            color: #fff;
+            background-color: #4e54c8;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1;
+            position: relative;
+        }
+
+        .join-button:hover {
+            background-color: #8f94fb;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #4e54c8;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Northwest Greenville Roleplay</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Northwest Greenville Roleplay is a community-driven roleplay server on Discord. We provide a fun and engaging environment for roleplaying enthusiasts. Our server offers a variety of roleplay scenarios and events, ensuring there's something for everyone.</p>
+    </section>
+    <section id="rules">
+        <h2>Server Rules</h2>
+        <ul>
+            <li>Respect all members.</li>
+            <li>No spamming.</li>
+            <li>Keep content appropriate.</li>
+            <li>Follow all Discord Terms of Service.</li>
+        </ul>
+    </section>
+    <section id="join">
+        <h2>Join Our Discord</h2>
+        <p>Click the button below to join our Discord server:</p>
+        <a href="https://discord.gg/JyxYqGJYej" target="_blank" class="join-button">Join Now</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 Northwest Greenville Roleplay</p>
+    </footer>
+</body>
+</html>
