@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northwest Greenville Roleplay</title>
+    <title>NGR</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             color: #333;
         }
 
+        html {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
         header {
-            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
             color: #fff;
             padding: 2rem 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
         }
 
         nav ul {
@@ -42,7 +55,7 @@
         }
 
         nav ul li a:hover {
-            color: #ffcc00;
+            color: #f5a623;
         }
 
         section {
@@ -54,6 +67,7 @@
             border-radius: 10px;
             position: relative;
             overflow: hidden;
+            animation: slideIn 1s ease-out;
         }
 
         section:before {
@@ -81,23 +95,35 @@
         }
 
         section#about {
-            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
         }
 
         section#rules {
-            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
+        }
+
+        section#services {
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
+        }
+
+        section#ingame-rules {
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
+            text-align: center;
+        }
+
+        section#content {
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
         }
 
         section#join {
-            background: linear-gradient(135deg, #f9f586, #fbc2eb);
-            text-align: center;
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
         }
 
         .join-button {
             display: inline-block;
             padding: 15px 30px;
             color: #fff;
-            background-color: #4e54c8;
+            background-color: #4a90e2;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -106,18 +132,21 @@
         }
 
         .join-button:hover {
-            background-color: #8f94fb;
+            background-color: #50e3c2;
             transform: scale(1.05);
         }
 
         footer {
-            background: #333;
+            background: linear-gradient(135deg, #4a90e2, #f5a623);
             color: #fff;
             text-align: center;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             bottom: 0;
+            cursor: pointer;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
         }
 
         h1, h2 {
@@ -130,11 +159,12 @@
 
         h2 {
             font-size: 2rem;
-            color: #4e54c8;
+            color: black;
         }
 
         ul {
             padding-left: 20px;
+            text-align: left;
         }
 
         ul li {
@@ -146,39 +176,146 @@
                 padding: 2rem 1rem;
             }
         }
+
+        /* Animation Styles */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .fade-in-delayed {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .fade-in-more-delayed {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 1s;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Northwest Greenville Roleplay</h1>
+        <h1 id="header-text">Welcome to NorthWest Greenville Roleplay</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#rules">Rules</a></li>
+                <li><a href="#services">Public Services</a></li>
+                <li><a href="#ingame-rules">In-Game Rules</a></li>
+                <li><a href="#content">Content</a></li>
                 <li><a href="#join">Join Us</a></li>
             </ul>
         </nav>
     </header>
     <section id="about">
         <h2>About Us</h2>
-        <p>Northwest Greenville Roleplay is a community-driven roleplay server on Discord. We provide a fun and engaging environment for roleplaying enthusiasts. Our server offers a variety of roleplay scenarios and events, ensuring there's something for everyone.</p>
+        <p>NorthWest Greenville Roleplay is a community-driven roleplay server on Discord. We provide a fun and engaging environment for roleplaying enthusiasts. Our server offers a variety of roleplay scenarios and events, ensuring there's something for everyone.</p>
     </section>
     <section id="rules">
         <h2>Server Rules</h2>
         <ul>
-            <li>Respect all members.</li>
-            <li>No spamming.</li>
-            <li>Keep content appropriate.</li>
-            <li>Follow all Discord Terms of Service.</li>
+          <li><strong>1. </strong>No Swearing</li>
+          <li><strong>2.</strong> No Bullying</li>
+          <li><strong>3.</strong> No Spamming</li>
+          <li><strong>4.</strong> be respectful to everyone</li>
+          <li><strong>5.</strong> No mass ping spam</li>
+          <li><strong>6.</strong> Be 13+ Year old</li>
+          <li><strong>7.</strong> No discord invites</li>
+          <li><strong>8. </strong>Follow Discord's Terms of Service</li>
         </ul>
     </section>
+    <section id="services">
+        <h2>Public Services</h2>
+        <ul>
+            <strong><li>Wisconsin State Patrol</li>
+            <li>Outagamie County Sheriff's Office</li>
+            <li>Fox Valley Metro Police Department</li>
+            <li>National Park Service</li>
+            <li>Greenville Fire Department</li>
+            <li>Department of Transportation</li></strong>
+        </ul>
+    </section>
+    <section id="ingame-rules">
+        <h2>In-Game Rules</h2>
+        <ul>
+            <li><strong>If you notice an emergency vehicle responding, you must yield to the right or left side of the road to let them pass. If there's a traffic stop, you must switch lanes or reduce your speed for the officers safety.</strong></li>
+            <li><strong>As a civilian you may not VOID, however, you may request a void from a staff member if you feel like it would be unnecessary to roleplay something out. Additionally, civilians are required to request permission from an LEO on the scene (or staff member if an LEO is not present in that scene/session) when wanting to call county tow/EMS when DOT or GVFD are not present in the session.</strong></li>
+            <li><strong>While committing a crime you must wait 15 minutes before committing another crime. When peacetime is enabled everyone should be following all laws. That indicates there is a shortage of State Patrol and Fire & Rescue. With that stated, there should be no crimes. That involves running red lights, illegal U-turns, burnouts, donuts, drifting, kidnapping, fighting, robberies, busting tires, go off-road, oncoming, etc.</strong></li>
+            <li><strong>When peacetime is disabled, crimes are allowed to be committed, however it may not be something that is extreme enough for a large amount of emergency services to be needed, as that would be considered a priority. On the other hand, you may not break multiple laws in a short amount of time or you will be punished. When peacetime is off, you may not go off road, go oncoming, running into other users or objects, etc.</strong></li>
+            <li><strong>Priority is when you create a large scene with extreme involvement of Emergency Services. Priority can be given out by staff members at any point within a session. The host will announce when they are willing to give priority, and at that point you will follow the steps they have given you in-game. The one person who received priority will be the only person in the session who will be allowed to cause scenes with extreme involvement of Emergency Services. Even with priority, you may not off-road, go on-coming, crash into people at speeds more than 30mph and drive off, fail to roleplay vehicle damage such as popped tires, switch cars/respawn the vehicle (or change the plate/color/rims), and do any banned roleplay. Banned roleplays are listed in rule 17 but are not limited to those specifically in that rule.</strong></li>
+            <li><strong>You are only allowed to go on the criminal team in-game when you are given priority by a staff member when peacetime is off. This is due to the team giving you a gun that can damage users on the LEO teams and also allowing you to rob banks/cash registers. If you have priority, you are permitted to use the gun.</strong></li>
+            <li><strong>The following roleplay scenarios are bannable offenses:Any sort of sexual roleplays, child neglect, school shootings, narcotic roleplay, alcoholic roleplay, suicidal/graphic roleplay, any type of bomb roleplay, kidnapping, mass murder, cruel/unusual murders, abuse, and anything else that would be deemed inappropriate.</strong></li>
+            <li><strong>Fail Roleplay is not allowed at all in our sessions. If you are seen doing this, you will be punished. When peacetime is on, the FRP speed limit is 70 MPH, however, we recommend you to follow the road speed limit. When peacetime is off, the FRP speed limit is 85 MPH. If you have priority, the FRP speed limit is 95 MPH.</strong></li>
+            <li><strong>Cop baiting or “scene baiting” is not allowed in our sessions. This is when people purposely cause scenes or purposely do something to make an officer pull them over.</strong></li>
+            <li><strong>Combat logging is not allowed at any point in our sessions. Please make sure that you are not in any scenes before you leave the game. If you are in a scene and it’s an absolute emergency to leave, please contact a staff member and they will let you leave the session.</strong></li>
+            <li><strong>You may not go as LEO, GVFD, and/or DOT unless you have been trained and have the proper roles in this Discord stating that you have had the proper training.</strong></li>
+            <li><strong>You must be respectful to everyone in-game.</strong></li>
+            <li><strong>You may not interfere with any scenes that you are not involved in.</strong></li>
+            <li><strong>If you get into an accident with an object, you are to either call the city and pay for the damages, or notify the owner of the property and exchange information with them. If you get into an accident with a person under 30mph, you are to exchange information with them. If you get into an accident with the speed of 30mph+ and/or having at least one person injured in the scene, you MUST roleplay it out more than exchanging insurances (taking photos for insurance purposes, calling the cops, etc).</strong></li>
+            <li><strong>You are not allowed to impersonate staff members, officers, DOT, and/or EMT/FD.</strong></li>
+            <li><strong>ou May join a scene voice channel. This is to allow easier communication for our emergency services.</strong></li>
+            <li><strong>Please refrain from abusing your horn. This also involves any kinds of excessive and unnecessary noise such as revving, spamming food tools, doorbells, and more. Try using your horn for only 4-5 seconds to prevent anyone getting annoyed, and to prevent it being classified as abusing in-game sounds. You may not abuse spatial voice in a way that disturbs the gameplay within the session such as creating loud noises.</strong></li>
+            <li><strong>To see our banned vehicles head over <a href="https://yousef271.github.io/Banned-vehicle-in-Northwest-Greenville-Roleplay/" target="_blank">here</a>.</strong></li>
+        </ul>
+    </section>
+    <section id="content">
+      <h2>Content</h2>
+      <p>Our server features a variety of content to enhance your roleplaying experience. Here, you'll find announcements, event schedules, roleplay tips, and more. We strive to provide engaging and interactive content to keep our community active and entertained.</p>
+      <h3>YouTube</h3>
+      <p>Subscribe to our YouTube channel for the latest videos, tutorials, and event highlights.</p>
+      <a href="https://www.youtube.com/@NwGrRl" target="_blank" class="join-button">Subscribe on YouTube</a>
+  </section>
     <section id="join">
-        <h2>Join Our Discord</h2>
-        <p>Click the button below to join our Discord server:</p>
-        <a href="https://discord.gg/JyxYqGJYej" target="_blank" class="join-button">Join Now</a>
+        <h2>Join Us</h2>
+        <p>If you're ready to join our vibrant roleplaying community, click the button below to get started. We can't wait to see you in NorthWest Greenville Roleplay!</p>
+        <a href="https://discord.gg/CHDtcdUZAX" target="_blank" class="join-button">Join the Community</a>
     </section>
     <footer>
-        <p>&copy; 2024 Northwest Greenville Roleplay</p>
+        <p id="footer-text">NGR &copy; 2024. All Rights Reserved.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const headerText = document.getElementById('header-text');
+            const footerText = document.getElementById('footer-text');
+            const sections = document.querySelectorAll('section');
+
+            // Add fade-in classes to elements
+            headerText.classList.add('fade-in');
+            footerText.classList.add('fade-in-delayed');
+
+            sections.forEach((section, index) => {
+                if (index % 2 === 0) {
+                    section.classList.add('fade-in-delayed');
+                } else {
+                    section.classList.add('fade-in-more-delayed');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
