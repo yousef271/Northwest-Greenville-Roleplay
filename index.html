@@ -22,7 +22,7 @@
         }
 
         a {
-            color: blue;
+            color: #277BEF;
             text-decoration: none;
         }
         header {
@@ -147,6 +147,11 @@
             cursor: pointer;
             border-top-right-radius: 25px;
             border-top-left-radius: 25px;
+            transition: all 1s;
+        }
+
+        footer:hover {
+            scale: 1.05;
         }
 
         h1, h2 {
@@ -314,6 +319,13 @@
                 } else {
                     section.classList.add('fade-in-more-delayed');
                 }
+            });
+        });
+
+        document.getElementById("footer-text").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
             });
         });
     </script>
