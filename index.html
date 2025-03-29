@@ -3,199 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGR</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #f5f5f5, #eaeaea);
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        html {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-            color: #fff;
-            padding: 3rem 0;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            border-bottom-right-radius: 50px;
-            border-bottom-left-radius: 50px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        section {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        nav ul li a::after {
-            content: '';
-            display: block;
-            height: 2px;
-            width: 0;
-            background: #f5a623;
-            transition: width 0.3s;
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        section {
-            padding: 4rem 2rem;
-            margin: 2rem auto;
-            max-width: 800px;
-            background: #fff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-        }
-
-        section h2 {
-            margin-top: 0;
-            color: #4a90e2;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        section#rules {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        section#about {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        section#services {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        section#ingame-rules {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        section#content {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        section#join {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-        }
-
-        .join-button {
-            display: inline-block;
-            padding: 15px 30px;
-            color: #fff;
-            background-color: #4a90e2;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .join-button:hover {
-            background-color: #50e3c2;
-            transform: scale(1.05);
-        }
-
-        footer {
-            background: linear-gradient(135deg, #4a90e2, #f5a623);
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            border-top-right-radius: 50px;
-            border-top-left-radius: 50px;
-            transition: all 0.3s;
-            margin-top: 2rem;
-            cursor: pointer;
-        }
-
-        footer:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            section {
-                padding: 2rem 1rem;
-            }
-            header h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-    </style>
+    <title>NGVR</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="NGVR.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 id="header-text">Welcome to NorthWest Greenville Roleplay</h1>
+        <h1 id="header-text">Welcome to Northwest Greenville Roleplay</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#rules">Rules</a></li>
+                <li><a href="#server_information">Server Information</a></li>
                 <li><a href="#services">Public Services</a></li>
                 <li><a href="#ingame-rules">In-Game Rules</a></li>
                 <li><a href="#content">Content</a></li>
@@ -203,73 +21,95 @@
             </ul>
         </nav>
     </header>
-    <section id="about" class="fade-in">
+    <section id="about">
         <h2>About Us</h2>
-        <p><strong>NorthWest Greenville Roleplay is a community-driven roleplay server on Discord. We provide a fun and engaging environment for roleplaying enthusiasts with various scenarios and events.</strong></p>
+        <p>Northwest Greenville Roleplay is a community-driven roleplay server on Discord. We provide a fun and engaging environment for roleplaying enthusiasts. Our server offers a variety of roleplay scenarios and events, ensuring there's something for everyone.</p>
     </section>
-    <section id="rules" class="fade-in">
-        <h2>Server Rules</h2>
+    <section id="server_information">
+        <h2>Server Information</h2>
         <ul>
-            <li><strong>1.</strong> No Swearing</li>
-            <li><strong>2.</strong> No Bullying</li>
-            <li><strong>3.</strong> No Spamming</li>
-            <li><strong>4.</strong> Be respectful to everyone</li>
-            <li><strong>5.</strong> No mass ping spam</li>
-            <li><strong>6.</strong> Must be 13+</li>
-            <li><strong>7.</strong> No Discord invites</li>
-            <li><strong>8.</strong> Follow Discord's Terms of Service</li>
+            <li><strong>Fail Roleplay (FRP): </strong> FRP (Fail Roleplay) is not permitted within this community. We strive to maintain immersive and authentic roleplaying experiences for all members, and engaging in FRP detracts from that goal. Please adhere to the established roleplaying standards and guidelines to ensure a positive and enjoyable environment for everyone.</li>
+            <li><strong>Combat Logging: </strong> Participants are expected to remain connected during active roleplay scenarios, particularly those involving law enforcement or emergency situations. Disconnecting from the game to evade consequences or interactions, known as Combat Logging, is strictly forbidden.</li>
+            <li><strong>Cop/Staff Baiting: </strong> Refrain from intentionally provoking law enforcement officers or server staff members with the aim of eliciting a negative response or encouraging rule breaches. Show respect for the roles and authority of in-game law enforcement and server staff.</li>
+            <li><strong>Vehicle Spawning Rules: </strong> Vehicle spawning is only permitted at designated locations, such as the dealership, apartments, claimed houses, friend's houses, and specific commercial areas. Please obtain staff permission via '!Staff Respawn Permissions' for spawning outside these areas, and refrain from spawning vehicles on the streets.</li>
+            <li><strong>Restricted Vehicles: </strong> You are only permitted to drive restricted vehicles if you own the appropriate exemptions. Failure to adhere to this rule may result in disciplinary action.</li>
+            <li><strong>Public Services: </strong> Participation in public services is limited to individuals with the proper authorization. Ensure you possess the required roles before operating as one to maintain the integrity and effectiveness of our community.</li>
+            <li><strong>Age Requirement: </strong> You must be 13 years of age or older to join the server. This complies with Discord's Terms of Service and ensures a safer environment for all members.</li>
+            <li><strong>Respect Everyone: </strong> Treat all members with kindness, respect, and empathy. Discrimination, harassment, hate speech, or bullying of any kind will not be tolerated.</li>
+            <li><strong>Keep Discussions Civil: </strong> Engage in discussions with civility and maturity. Avoid personal attacks, derogatory language, or inflammatory remarks.</li>
+            <li><strong>Respect Privacy: </strong> Do not share personal information about others without consent. Respect others' privacy and boundaries at all times.</li>
+            <li><strong>No NSFW Content: </strong> Keep the server safe for all ages by refraining from sharing or discussing explicit or NSFW (Not Safe For Work) content, including images, videos, or links.</li>
+            <li><strong>No Spamming or Self-Promotion: </strong> Avoid excessive posting of messages, emojis, or repeated content. Self-promotion is allowed only in designated channels and must be relevant to the server's theme.</li>
+            <li><strong>No Drama or Toxicity: </strong> Keep drama, gossip, or toxic behavior out of the server. Maintain a positive and supportive atmosphere where everyone feels welcome.</li>
+            <li><strong>Listen to the Staff Team: </strong> Follow the instructions of the Staff Team. Their role is to maintain order and ensure a positive experience for all members.</li>
+            <li><strong>Follow Discord's Terms of Service: </strong> Abide by Discord's Terms of Service and Community Guidelines. Any behavior that violates these rules may result in disciplinary action.</li>
+
         </ul>
     </section>
-    <section id="services" class="fade-in">
+    <section id="services">
         <h2>Public Services</h2>
         <ul>
-            <li><strong>Wisconsin State Patrol</strong></li>
-            <li><strong>Outagamie County Sheriff's Office</strong></li>
-            <li><strong>Fox Valley Metro Police Department</strong></li>
-            <li><strong>National Park Service</strong></li>
-            <li><strong>Greenville Fire Department</strong></li>
-            <li><strong>Department of Transportation</strong></li>
+            <li>Wisconsin State Patrol</li>
+            <li>Outagamie County Sheriff's Office</li>
+            <li>Fox Valley Metro Police Department</li>
+            <li>National Park Service</li>
+            <li>Greenville Fire Department</li>
+            <li>Department of Transportation</li>
         </ul>
     </section>
-    <section id="ingame-rules" class="fade-in">
+    <section id="ingame-rules">
         <h2>In-Game Rules</h2>
         <ul>
-            <li><strong>Yield to emergency vehicles.</strong></li>
-            <li><strong>Request voids from staff if necessary.</strong></li>
-            <li><strong>Wait 15 minutes before committing another crime.</strong></li>
-            <li><strong>Follow laws during peacetime.</strong></li>
-            <li><strong>Priority scenes must be announced by staff.</strong></li>
-            <li><strong>Respect all players and scenes.</strong></li>
+            <li><strong>1. Yield to Emergency Vehicles: </strong> Always move to the right or left side of the road to allow emergency vehicles to pass. If there’s a traffic stop, switch lanes or reduce your speed for the safety of the officers.</li>
+            <li><strong>2. VOID Requests: </strong> Civilians cannot VOID their actions but may request a void from staff if they believe it’s necessary. Additionally, permission must be obtained from an LEO on the scene (or a staff member if no LEO is present) to call for tow/EMS when DOT or GVFD are not available.</li>
+            <li><strong>3. Crime Timing: </strong> After committing a crime, you must wait 15 minutes before committing another. During peacetime, all players must adhere to traffic laws, as this indicates a shortage of State Patrol and Fire & Rescue. No crimes are allowed during this time, including running red lights, illegal U-turns, and other unlawful behaviors.</li>
+            <li><strong>4. Peacetime Rules: </strong> When peacetime is disabled, crimes can be committed, but they must not require extensive emergency service involvement. Avoid breaking multiple laws in quick succession; doing so will result in punishment. Off-road driving, oncoming traffic, and reckless behavior are prohibited.</li>
+            <li><strong>5. Priority System: </strong> Priority is granted for creating large scenes involving emergency services, as announced by staff. Only the player with priority can initiate such scenes. Even with priority, you must avoid off-roading, oncoming traffic, and causing excessive damage.</li>
+            <li><strong>6. Criminal Team Access: </strong> You may only join the criminal team when given priority by a staff member during non-peacetime. This allows you to use weapons and engage in robberies.</li>
+            <li><strong>7. Bannable Roleplay Scenarios: </strong> The following scenarios are strictly prohibited: Any sexual roleplays, child neglect, school shootings, narcotic/alcohol roleplay, suicidal/graphic roleplay, bomb roleplay, kidnapping, mass murder, and other inappropriate actions.</li>
+            <li><strong>8. Fail Roleplay (FRP): </strong> FRP is not tolerated. Speed limits are set at 70 MPH during peacetime, 85 MPH when peacetime is off, and 95 MPH if you have priority. Always strive to follow road speed limits.</li>
+            <li><strong>9. Cop Baiting: </strong> Engaging in cop baiting or “scene baiting” to provoke officers is prohibited.</li>
+            <li><strong>10. Combat Logging: </strong> Combat logging is not allowed. Ensure you are not involved in any scenes before leaving the game. If an emergency arises, contact a staff member for permission to exit.</li>
+            <li><strong>11. LEO, GVFD, and DOT Roles: </strong> You must be properly trained and hold the appropriate roles in Discord to play as LEO, GVFD, or DOT.</li>
+            <li><strong>12. Respect: </strong> Treat all players with respect and courtesy in-game.</li>
+            <li><strong>13. Scene Interference: </strong> Do not interfere with scenes you are not involved in; this disrupts roleplay for others.</li>
+            <li><strong>14. Accidents: </strong> If you collide with an object, you are required to stop and exchange.</li>
         </ul>
     </section>
-    <section id="content" class="fade-in">
-        <h2>Content</h2>
-        <p><strong>Our server features various content to enhance your roleplaying experience, including announcements, event schedules, and roleplay tips.</strong></p>
-        <h3><strong>YouTube</strong</h3>
-        <p><strong>Subscribe to our YouTube channel for the latest videos and tutorials.</strong></p>
-        <a href="https://www.youtube.com/@NwGrRl" target="_blank" class="join-button">Subscribe on YouTube</a>
-    </section>
-    <section id="join" class="fade-in">
-        <h2><strong>Join Us</strong></h2>
-        <p><strong>If you're ready to join our vibrant roleplaying community, click the button below to get started. We can't wait to see you in NorthWest Greenville Roleplay!</strong></p>
-        <a href="https://discord.gg/CHDtcdUZAX" target="_blank" class="join-button">Join the Community</a>
+    <section id="content">
+      <h2>Content</h2>
+      <p>Our server features a variety of content to enhance your roleplaying experience. Here, you'll find announcements, event schedules, roleplay tips, and more. We strive to provide engaging and interactive content to keep our community active and entertained.</p>
+      <h3>YouTube</h3>
+      <p>Subscribe to our YouTube channel for the latest videos, tutorials, and event highlights.</p>
+      <a href="https://www.youtube.com/@NwGrRl" target="_blank" class="join-button">Subscribe on YouTube</a>
+      
+      <h3>TikTok</h3>
+      <p>Follow us on TikTok for short, entertaining clips from our roleplay sessions and community highlights.</p>
+      <a href="https://www.tiktok.com/@northwestgvrp" target="_blank" class="join-button">Follow on TikTok</a>
+  </section>
+    <section id="join">
+        <h2>Join Us</h2>
+        <p>If you're ready to join our vibrant roleplaying community, click the button below to get started. We can't wait to see you in Northwest Greenville Roleplay!</p>
+        <a href="https://discord.gg/drH8durADq" class="join-button">Join the Community</a>
     </section>
     <footer>
-        <p id="footer-text">NGR &copy; 2024. All Rights Reserved.</p>
+        <p id="footer-text">NGVR &copy; 2025. All Rights Reserved.</p>
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            const headerText = document.getElementById('header-text');
+            const footerText = document.getElementById('footer-text');
             const sections = document.querySelectorAll('section');
 
-            sections.forEach((section, index) => {
-                section.classList.add('fade-in');
-            });
-        });
+            headerText.classList.add('fade-in');
+            footerText.classList.add('fade-in-delayed');
 
-        document.getElementById("footer-text").addEventListener("click", function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+            sections.forEach((section, index) => {
+                if (index % 2 === 0) {
+                    section.classList.add('fade-in-delayed');
+                } else {
+                    section.classList.add('fade-in-more-delayed');
+                }
             });
         });
     </script>
