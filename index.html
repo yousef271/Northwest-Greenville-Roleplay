@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1 id="header-text">Welcome to Northwest Greenville Roleplay</h1>
+        <h1 id="header-text"><img class="jumping_stars" src="jumping stars.gif"> Welcome to Northwest Greenville Roleplay <img class="jumping_stars" src="jumping stars.gif"></h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -21,6 +21,7 @@
             </ul>
         </nav>
     </header>
+    <iframe id="discord_wedgit" src="https://discord.com/widget?id=1253785666047709246&theme=dark" class="discord_wedgit" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     <section id="about">
         <h2>About Us</h2>
         <p>Northwest Greenville Roleplay is a community-driven roleplay server on Discord. We provide a fun and engaging environment for roleplaying enthusiasts. Our server offers a variety of roleplay scenarios and events, ensuring there's something for everyone.</p>
@@ -93,25 +94,8 @@
         <a href="https://discord.gg/drH8durADq" class="join-button">Join the Community</a>
     </section>
     <footer>
-        <p id="footer-text">NGVR &copy; 2025. All Rights Reserved.</p>
+        <button id="footer-button" onclick="widget()"><p id="footer-text">NGVR &copy; 2025. All Rights Reserved.</p></button>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const headerText = document.getElementById('header-text');
-            const footerText = document.getElementById('footer-text');
-            const sections = document.querySelectorAll('section');
-
-            headerText.classList.add('fade-in');
-            footerText.classList.add('fade-in-delayed');
-
-            sections.forEach((section, index) => {
-                if (index % 2 === 0) {
-                    section.classList.add('fade-in-delayed');
-                } else {
-                    section.classList.add('fade-in-more-delayed');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
