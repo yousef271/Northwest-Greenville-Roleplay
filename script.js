@@ -16,15 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function widget() {
-    const arrow = document.getElementById("arrow");
     const discord_wedgit = document.getElementById("discord_wedgit");
 
     // Check the current rotation and toggle
-    if (arrow.style.transform === "rotate(180deg)") {
-        arrow.style.transform = "rotate(0deg)"; // Reset to original rotation
-        discord_wedgit.style.marginLeft = "90%"; // Move widget back
+    if (discord_wedgit.style.marginLeft === "-20%") {
+        discord_wedgit.style.marginLeft = "1%"; // Adjust according to the actual width
     } else {
-        arrow.style.transform = "rotate(180deg)"; // Rotate arrow
-        discord_wedgit.style.marginLeft = "100%"; // Move widget to the right
+        discord_wedgit.style.marginLeft = "-20%"; // Move widget to the right
     }
 }
