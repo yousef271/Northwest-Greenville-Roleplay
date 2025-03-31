@@ -100,6 +100,23 @@ section#join {
     position: relative;
 }
 
+.jumping_stars {
+    width: 5vw;
+    height: 10vh;
+}
+
+.discord_wedgit {
+    transition: 1s; 
+    border-radius: 25px; 
+    width: 350; 
+    height: 350px; 
+    margin-left: -20%;
+    margin-top: 2%;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+}
+
 .join-button:hover {
     background-color: #8f94fb;
     transform: scale(1.05);
@@ -112,9 +129,15 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    cursor: pointer;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+    z-index: 3;
+}
+
+#footer-button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 h1, h2 {
